@@ -1,8 +1,16 @@
 {
-  "name": "searchForSum",
+  "name": "search-for-sum",
+  "description": "I wanted to practice following along with the youtube google mock interviews and learn a benchmarking process.",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/plumpNation/search-for-sum.git"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node index"
+  },
   "dependencies": {
     "benchmark": "^2.1.4"
   }

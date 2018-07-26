@@ -1,10 +1,10 @@
 const Benchmark = require('benchmark');
-const createNumberArray = require('./helpers').createNumberArray;
-const quadratic = require('./quadratic').test;
+const helpers = require('./helpers');
+const quadratic = require('./tests/quadratic');
 
 const suite = new Benchmark.Suite;
 
-const values = createNumberArray(10000, 1, 10);
+const values = helpers.createNumberArray(10000, 1, 10);
 
 suite
     .add('Quadratic', function () {
