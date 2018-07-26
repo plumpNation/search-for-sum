@@ -32,7 +32,11 @@ suite
     })
     .add('Binary', function () {
         // must use a sorted array, so it's not comparable to bidirectional
-        binary(testData[1], desired);
+        binary.sorted(testData[1], desired);
+    })
+    .add('Binary unsorted', function () {
+        // uses an unsorted array, so it's not comparable to bidirectional
+        binary.unsorted(testData[2], desired);
     })
     .add('Bidirectional with [] cache', function () {
         bidirectional.array(testData[3], desired);
