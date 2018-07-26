@@ -4,11 +4,15 @@ const quadratic = require('./tests/quadratic');
 
 const suite = new Benchmark.Suite;
 
-const values = helpers.createNumberArray(10000, 1, 10);
+const unsorted = helpers.createNumberArray(10000, 1, 10);
+const sorted = unsorted.sort();
 
 suite
-    .add('Quadratic', function () {
-        quadratic(values, 8);
+    .add('Quadratic unsorted', function () {
+        quadratic(unsorted, 8);
+    })
+    .add('Quadratic sorted', function () {
+        quadratic(sorted, 8);
     })
     .on('cycle', function (event) {
         console.log(String(event.target));
