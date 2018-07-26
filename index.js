@@ -1,6 +1,7 @@
 const Benchmark = require('benchmark');
 const helpers = require('./helpers');
 const quadratic = require('./tests/quadratic');
+const binary = require('./tests/binary');
 
 const suite = new Benchmark.Suite;
 
@@ -13,6 +14,9 @@ suite
     })
     .add('Quadratic `for()`', function () {
         quadratic.for(sorted, 8);
+    })
+    .add('Binary', function () {
+        binary(sorted, 8);
     })
     .on('cycle', function (event) {
         console.log(String(event.target));
