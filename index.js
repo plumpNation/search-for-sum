@@ -7,7 +7,7 @@ const bidirectional = require('./tests/bidirectional');
 const suite = new Benchmark.Suite;
 
 const unsorted = helpers.createNumberArray(10000, 1, 10);
-const sorted = unsorted.sort();
+const sorted = unsorted.sort((a, b) => a - b);
 
 const desired = 8;
 
