@@ -7,7 +7,7 @@ module.exports = function (sorted = [], desiredSum = 0) {
     let endIndex = sorted.length - 1;
 
     for (let i = 0; i < sorted.length; i += 1) {
-        while (startIndex <= endIndex) {
+        while (startIndex < endIndex) {
             const middleIndex = startIndex + Math.floor((endIndex - startIndex) * .5);
 
             // If we've found the element just return its position.
