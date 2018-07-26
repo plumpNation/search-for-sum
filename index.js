@@ -9,9 +9,6 @@ const unsorted = helpers.createNumberArray(10000, 1, 10);
 const sorted = unsorted.sort();
 
 suite
-    .add('Quadratic `some()`', function () {
-        quadratic.some(sorted, 8);
-    })
     .add('Quadratic `for()`', function () {
         quadratic.for(sorted, 8);
     })
