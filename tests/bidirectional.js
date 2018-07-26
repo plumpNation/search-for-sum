@@ -66,3 +66,26 @@ exports.map = function _map(unsorted = [], desiredSum = 0) {
 
     return false;
 }
+
+exports.set = function _set(unsorted = [], desiredSum = 0) {
+    const compliments = new Set();
+
+    let endIndex = unsorted.length - 1;
+    let startIndex = 0;
+
+    for (let startIndex = 0; startIndex < endIndex; startIndex += 1, endIndex -= 1) {
+        if (unsorted[startIndex] + unsorted[endIndex] === desiredSum) {
+            return true;
+        }
+
+        const compliment = desiredSum - unsorted[startIndex];
+
+        if (compliments.has(compliment)) {
+            return true;
+        }
+
+        compliments.add(compliment)
+    }
+
+    return false;
+}

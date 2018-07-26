@@ -47,6 +47,9 @@ suite
     .add('Bidirectional with Map() cache', function () {
         bidirectional.map(testData[5], desired);
     })
+    .add('Bidirectional with Set() cache', function () {
+        bidirectional.set(testData[6], desired);
+    })
     .on('cycle', function (event) {
         console.log(String(event.target));
     })
